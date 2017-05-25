@@ -1,0 +1,332 @@
+<html><head>
+
+<title>CS106B</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+<link href="CS106B_files/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="CS106B_files/style.css">
+
+<!-- Java Script -->
+<script async="" src="CS106B_files/analytics.js"></script><script src="CS106B_files/jquery.js"></script>
+<script src="CS106B_files/moment.js"></script>
+<script src="CS106B_files/bootstrap.js"></script>
+<script src="CS106B_files/ace.js" type="text/javascript"></script><style id="ace_editor">.ace_editor {position: relative;overflow: hidden;font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;font-size: 12px;line-height: normal;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: text;min-width: 100%;}.ace_dragging, .ace_dragging * {cursor: move !important;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;}.ace_text-input.ace_composition {background: #f8f8f8;color: #111;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;/* setting pointer-events: auto; on node under the mouse, which changesduring scroll, will break mouse wheel scrolling in Safari */pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0px;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-moz-transition: opacity 0.18s;-webkit-transition: opacity 0.18s;-o-transition: opacity 0.18s;-ms-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;display: block;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);-moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);-webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);-moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);-webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}/*** Dark version for fold widgets*/.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {-moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);-webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-moz-transition: opacity 0.4s ease 0.05s;-webkit-transition: opacity 0.4s ease 0.05s;-o-transition: opacity 0.4s ease 0.05s;-ms-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-moz-transition: opacity 0.05s ease 0.05s;-webkit-transition: opacity 0.05s ease 0.05s;-o-transition: opacity 0.05s ease 0.05s;-ms-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;border-radius: 2px;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style>
+<script src="CS106B_files/specialfx.js" type="text/javascript"></script>
+
+<!-- Stanford -->
+<link href="CS106B_files/css.css" rel="stylesheet" type="text/css">
+<link href="CS106B_files/css_002.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="http://web.stanford.edu/class/cs106b/">CS106B</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <!--<li><a href="#">Lectures</a></li>-->
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/1-Welcome/">1 Welcome</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/2-Functions-BigO/">2 Functions and Intro to Big O</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/3-BigO-Vectors-Grids/">3 Big O, Vectors, Grids</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/4-Strings/">4 Strings</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/5-Stacks_Queues/">5 Stacks and Queues</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/6-Sets_Maps/">6 Sets and Maps </a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/7-IntroToRecursion/">7 Recursive Thinking</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/8-Fractals/">8 Fractals</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/9-RecursiveBacktracking1/">9 Recursive Backtracking 1</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/10-RecursiveBacktracking2/">10 Recursive Backtracking 2</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/11-Sorting/">11 Sorting</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/12-Memoization/">12 Memoization</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/13-Classes/">13 Classes</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/14-Pointers/">14 Pointers</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/15-DynamicAllocation/">15 DynamicAllocation</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/16-LinkedLists/">16 Linked Lists</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/17-ImplementingVector/">17 Implementing Vector</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/18-BinaryHeaps/">18 Binary Heaps</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//lectures/19-Trees/">19 Trees</a></li>
+            <!--
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/20-BinarySearchTrees/">20 Binary Search Trees</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/21-Hashing/">21 Hashing</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/22-Graphs/">22 Graphs</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/23-GraphsII/">23 Graphs II</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/24-BFS_DFS/">24 Breadth First Search and Depth First Search</a></li>
+            
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/25-Dijkstra_AStar/">25 Dijkstra and A*</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/26-Inheritance/">26 C++ Inheritance and Polymorphism</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/27-EsotericDataStructures/">27 Esoteric Data Structures</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//lectures/28-LastClass/">28 Last Class</a></li>
+            -->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Handouts <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://web.stanford.edu/class/cs106b//handouts/1-GeneralInformation.pdf">1 - General Information</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//handouts/2-CoursePlacement.pdf">2 - Course Placement</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//handouts/3-HonorCode.pdf">3 - Honor Code</a></li>
+            <!--
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/velociraptorSafety.html">6 - Velociraptor Safety</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/bananagrams.html">7 - Bananagrams</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/midterm.html">8 - Midterm</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/search.html">9 - Search</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/final.html">10 - Final</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/velociraptorSafety.html">Grids and Raptor Safety</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/bananagrams.html">Bananagrams</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/duoslango.html">Duoslango</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/midterm.html">Midterm Info</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/search.html">Search</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//handouts/final.html">Final Info</a></li>-->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <!--<li><a href="//web.stanford.edu/class/cs106b//assn/serafini.html">2 Serafini</a></li>
+           <li role="separator" class="divider"></li>
+           <li><a href="//web.stanford.edu/class/cs106b//assn/contest.html">Contest</a></li>-->
+           
+            <li><a href="http://web.stanford.edu/class/cs106b//assn/NameHash.html">0 - Name Hash</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//assn/life.html">1 - Game of Life</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b/assn/serafini.html">2 - Serafini</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//assn/recursion.html">3 - Recursion</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//assn/boggle.html">4 - Boggle!</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//assn/patient-queue.html">5 - Patient Queue</a></li>
+            <!--
+            <li><a href="//web.stanford.edu/class/cs106b//assn/binaryTrees.html">6 - Binary Trees</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//assn/trailblazer.html">7 - Trailblazer</a></li>
+            -->
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sections <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section01.pdf">Section 01</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section01-solutions.pdf">Section 01 Solution</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section02.pdf">Section 02</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section02-solutions.pdf">Section 02 Solution</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section03.pdf">Section 03</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section03-solutions.pdf">Section 03 Solution</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section04.pdf">Section 04</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section04-solutions.pdf">Section 04 Solution</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//sections/section05.pdf">Section 05</a></li>
+            <!--
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section05-solutions.pdf">Section 05 Solution</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section06.pdf">Section 06</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section06-solutions.pdf">Section 06 Solution</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section07.pdf">Section 07</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section07-solutions.pdf">Section 07 Solution</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section08.pdf">Section 08</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section08-solutions.pdf">Section 08 Solution</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section09.pdf">Section 09</a></li>
+            <li><a href="//web.stanford.edu/class/cs106b//sections/section09-solutions.pdf">Section 09 Solution</a></li>
+              -->
+            <li role="separator" class="divider"></li>
+            <li><a href="https://cs198.stanford.edu/cs106/auth/section/SwitchSection.aspx?class=2">Late Signup Form</a></li>
+            <li><a href="https://cs198.stanford.edu/cs106/auth/section/SwitchSection.aspx?class=2">Switch sections</a></li>
+            <li><a href="https://cs198.stanford.edu/cs106/auth/section/ViewSections.aspx?class=2">List of all section times/locations</a></li>
+            <li><a href="https://cs198.stanford.edu/cs106/auth/section/DropClass.aspx?class=2">Drop section</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">YEAH <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <li><a href="http://web.stanford.edu/class/cs106b//yeah/life/yeah_life.pdf">1 - Game of Life</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//yeah/adts/yeah_adts.pdf">2 - Serafini / ADTs</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//yeah/recursion/yeah_recursion.pdf">3 - Recursion</a></li>
+	     <li><a href="http://web.stanford.edu/class/cs106b//yeah/pqueue/yeah_pqueue.pdf">5 - PatientQueue</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://web.stanford.edu/class/cs106b//handouts/overview.html">Course Overview</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//handouts/help.html">Help Hours Calendar</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//handouts/qt-creator.html">QT Creator</a></li>
+            <li><a href="http://web.stanford.edu/class/cs106b//handouts/styleguide.html">Style Guide</a></li>
+            <!--<li><a href="//web.stanford.edu/class/cs106b//handouts/diff.html">Example Diff Tool</a></li>-->
+           <!--<li><a href=""><i>None yet!</i></a></li>-->
+
+          </ul>
+        </li>
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://web.stanford.edu/class/cs106b//handouts/overview.html"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span> Overview</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<div class="container">
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<h1>
+						Assignment 0: NameHash
+					</h1>
+
+					<p class="subtleHeading">
+						April 3rd, 2017
+					</p>					
+
+				</div>
+				<hr>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-9">
+                <p>
+                <b>Assignment due date: Friday, April 7th, 2017, Noon</b>
+                </p>
+				<p>
+                                Welcome to CS106B! This assignment is designed
+                                to help you get your development environment set
+                                up and running so that you can compile, run, and
+                                debug programs. There isn't any actual 
+                                programming involved, and we hope that this
+                                doesn't take you too much time to complete.
+                                <br>
+                                <strong>This assignment must be completed individually. Working in groups is not permitted.</strong>
+				</p>
+				<p>
+                </p><p></p>
+                Steps:
+                <ol>
+                    <li><strong>Download and Install Qt Creator</strong><br>
+                        Your first task is to download and install Qt Creator, 
+                        the development environment that we'll be using in
+                        CS106B this quarter. To do so, click the “Setting
+                        Up Qt Creator” link under the “resources”
+                        section on the CS106B website
+                        (http://cs106b.stanford.edu) and follow the instructions
+                        there.<br>
+                        If you run into trouble installing Qt Creator,
+                        don't panic! We'll be holding a special set of LaIR
+                        hours on Thursday, April 6th specifically to help with
+                        Qt Creator issues. 
+                    </li>
+                    <li><strong>Download the Name Hasher Program</strong><br>
+			<div class="largefileboxrow">
+				<div class="largefilebox">
+				<a href="http://web.stanford.edu/class/cs106b/assnFiles/namehash/HW0_NameHash.zip">
+				    <img src="CS106B_files/icon48-zip.gif" class="largeicon" alt="icon"><br>
+						NameHash Project ZIP</a> <br>
+						(open <span class="filename">NameHash.pro</span>)
+				</div>
+			</div>
+		    </li>
+		    <li>
+                        <strong>Hash Your Name!</strong><br>
+                        Compile and run the program you've just downloaded.
+                        It will ask you to enter your (preferred) first and
+                        last names. When you do, it will give back a hash code,
+                        a special number associated with your name (we will
+                        discuss hash codes in CS106B!). You can
+                        think of your hash code as a “fingerprint”
+                        associated with your name that's unlikely to be the
+                        same as anyone else's fingerprint. <strong>Write this
+                        number down</strong>; you'll need it to complete the assignment!
+		    </li>
+                    <li>
+                        <strong>Use the Debugger!</strong><br>
+                        Download the following PDF:<p>
+                        <a href="http://web.stanford.edu/class/cs106b/handouts/DebuggerTutorial.pdf">Debugger Tutorial</a> </p><p>
+                        This tutorial will walk you
+                        through how to use the debugger to run program you
+                        just downloaded one step at a time. Follow the
+                        instructions in that guide. At some point, you'll be
+                        asked to write down a number. <strong>Write this number
+                        down</strong>; you'll need it to complete the assignment!
+                    </p></li>
+                    <li>
+                        <strong>Read about the Honor Code</strong><br>
+                        You are required to read the handout on the Stanford
+                        Honor Code on the CS106B website before submitting
+                        assignments in this class. Take a minute to read over
+                        it before proceeding to the final step.
+                    </li>
+                    <li>
+                        <strong>Make an account at CodeStepByStep.com</strong><br>
+                        Please go to the following website and create an account.
+                        We will be using CodeStepByStep this quarter (minimally)
+                        so that you can get practice on the topics we cover.<p>
+                        <a href="http://www.codestepbystep.com/">http://www.codestepbystep.com</a>
+                    </p></li>
+                    <li>
+                        <strong>Submit Everything!</strong>
+                        Once you've finished everything, fill out the form at
+                        the following URL:<p>
+                        <a href="https://goo.gl/forms/bcA7k07fDgxqwVWr1">https://goo.gl/forms/bcA7k07fDgxqwVWr1</a>
+                        </p><p>
+                        This form will ask for the numbers from Step Three and
+                        Step Four, along with some questions about the Honor
+                        Code, who you are and why you're so great. And that's
+                        it! You're done!
+                    </p></li>
+
+                </ol>
+            </div>
+		</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+		<hr>
+
+		<div class="footer">
+			<p class="pull-left">
+				© Stanford 2017 | Created by Chris Gregg.
+				CS106B has been developed over decades by many talented teachers. 
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74362126-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</div>
+
+
+
+</body></html>
