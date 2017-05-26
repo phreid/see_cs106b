@@ -47,7 +47,7 @@ void readInputToGrid(Grid<Space> &grid) {
     }
 }
 
-string gridToString(Grid<Space> &grid) {
+void printGrid(Grid<Space> &grid) {
     string output;
 
     for (int r = 0; r < grid.numRows(); r++) {
@@ -58,7 +58,7 @@ string gridToString(Grid<Space> &grid) {
         output += '\n';
     }
 
-    return output;
+    cout << output;
 }
 
 int countNeighbors(Grid<Space> &grid, int r, int c, bool useWrapping) {
@@ -71,12 +71,20 @@ int countNeighbors(Grid<Space> &grid, int r, int c, bool useWrapping) {
 
     for (int i = 0; i < offsets.size(); i++) {
         for (int j = 0; j < offsets.size(); j++) {
-            int x = offsets.get(i);
-            int y = offsets.get(j);
+            int offX = offsets.get(i);
+            int offY = offsets.get(j);
+            int x = r - offX;
+            int y = c - offY;
 
-            if (! ((x == 0) & (y == 0))) {
-                if (grid.inBounds(r - x, c - y)) {
-                    if (grid.get(r - x, c - y) == Cell) numNeighbors++;
+            if (! ((offX == 0) & (offY == 0))) {
+                if (useWrapping) {
+                    int x_wrap = (x + grid.numRows()) % grid.numRows();
+                    int y_wrap = (y + grid.numCols()) % grid.numCols();
+                    if (grid.get(x_wrap, y_wrap) == Cell) numNeighbors++;
+                } else {
+                    if (grid.inBounds(x, y)) {
+                        if (grid.get(x, y) == Cell) numNeighbors++;
+                    }
                 }
             }
         }
@@ -102,10 +110,20 @@ void updateGrid(Grid<Space> &grid, bool useWrapping = false) {
     grid = tempGrid;
 }
 
+void tick(Grid<Space> &grid) {
+    updateGrid(grid);
+    printGrid(grid);
+}
+
 void animate(Grid<Space> &grid, int pauseTime, int numFrames) {
-    string s = gridToString(grid);
-    cout << s;
-    clearConsole();
+    string s;
+    int curFrame = 0;
+
+    while (curFrame < numFrames) {
+        tick(grid);
+        pause(pauseTime);
+        curFrame++;
+    }
 }
 
 int main() {
@@ -113,8 +131,22 @@ int main() {
     Grid<Space> grid;
 
     readInputToGrid(grid);
+    printGrid(grid);
 
-    animate(grid, 50, 10);
+    while (true) {
+        string s = getLine("a)nimate, t)ick, q)uit? ");
+
+        if (s == "t") {
+            tick(grid);
+        } else if (s == "q") {
+            cout << "Have a nice Life!";
+            break;
+        } else if (s == "a") {
+            animate(grid, 50, 10);
+        } else {
+            cout << "Invalid choice; please try again." << endl;
+        }
+    }
 
     return 0;
 }
